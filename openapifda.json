@@ -1,0 +1,53 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "OpenFDA NDC API",
+    "version": "1.0.0",
+    "description": "Pozwala wyszukiwać produkty lecznicze wg substancji czynnej przez OpenFDA."
+  },
+  "servers": [
+    {
+      "url": "https://api.fda.gov"
+    }
+  ],
+  "paths": {
+    "/drug/ndc.json": {
+      "get": {
+        "summary": "Wyszukiwanie produktów leczniczych po substancji czynnej",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Query wg dokumentacji OpenFDA. Np.: active_ingredients.name:\"clonazepam\""
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 10
+            },
+            "description": "Liczba wyników"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Zwraca dane o produktach leczniczych",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
