@@ -42,7 +42,26 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "type": "object",
+                  "properties": {
+                    "meta": {
+                      "type": "object"
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "product_ndc": { "type": "string" },
+                          "brand_name": { "type": "string" },
+                          "generic_name": { "type": "string" },
+                          "manufacturer_name": { "type": "string" },
+                          "dosage_form": { "type": "string" },
+                          "route": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
