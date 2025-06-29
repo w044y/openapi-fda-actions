@@ -1,0 +1,11 @@
+Nasz GPT (PharmaData Validator) korzysta z zewnętrznych API (np. OpenFDA lub własnych API URPL) wyłącznie w celu realizacji zapytań użytkowników dotyczących danych o produktach leczniczych.
+
+Nie zapisujemy, nie przechowujemy i nie udostępniamy danych przesyłanych przez użytkownika.
+
+Każde zapytanie (np. nazwa substancji lub nazwa handlowa leku) jest przesyłane jednorazowo do zewnętrznego API tylko na czas realizacji odpowiedzi.
+
+Nie gromadzimy żadnych danych osobowych.
+
+Nie prowadzimy logów zapytań użytkowników.
+
+API działa w trybie „stateless” – nie przechowuje danych po zakończeniu zapytania.
